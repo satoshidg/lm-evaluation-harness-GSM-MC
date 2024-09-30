@@ -14,14 +14,4 @@ https://aisafetyfundamentals.com/
 
 # Citation
 The original paper of GSM-MC can be found here: https://arxiv.org/abs/2405.11966
-
-```
-@misc{zhang2024multiplechoice,
-      title={Multiple-Choice Questions are Efficient and Robust LLM Evaluators}, 
-      author={Ziyin Zhang and Lizhen Xu and Zhaokun Jiang and Hongkun Hao and Rui Wang},
-      year={2024},
-      eprint={2405.11966},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-```
+Zhang, Z., Xu, L., Jiang, Z., Hao, H., & Wang, R. (2024). Multiple-choice questions are efficient and robust LLM evaluators. arXiv. https://arxiv.org/abs/2405.11966
