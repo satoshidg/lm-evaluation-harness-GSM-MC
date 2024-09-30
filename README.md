@@ -1,6 +1,6 @@
 # Overview
 This is a fork of lm-evaluation-harness with an implementation of GSM-MC, a multiple-choice variant of GSM8k.
-The benchmark is implemented purely in yaml and can be found at lm-eval/tasks/gsm-mc.yaml.
+The benchmark is implemented purely in yaml and can be found at lm-eval/tasks/gsm-mc.yaml
 
 Validation was done using LLaMa3.1-8B and the model performed close to the one reported in the original paper.
 |Tasks |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
