@@ -1,0 +1,27 @@
+tag:
+  - math_word_problems
+task: gsm_mc
+dataset_path: satoshidg/GSM-MC-Stage
+dataset_name: null
+training_split: train
+test_split: test
+output_type: multiple_choice
+description: "The following are multiple choice questions (with answers) about grade school math."
+fewshot_config:
+  sampler: first_n
+  samples: [
+    {"Question: Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?\nA: 30,040\nB: 84\nC: 72\nD: 76\n\nAnswer: C"},
+    {"Question: Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?\nA: 10\nB: 2\nC: 32\nD: 19.64\n\n Answer: A"},
+    {"Question: Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?\nA: 35\nB: 5\nC: 100\nD: 15\n\n Answer: B"},
+    {"Question: Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday. If she wants to read half of the remaining pages tomorrow, how many pages should she read?\nA: 54\nB: 48\nC: 18\nD: 42\n\n Answer: D"}
+  ]
+doc_to_text: "Question: {{Question}}\nA: {{A}}\nB: {{B}}\nC: {{C}}\nD: {{D}}\n\nAnswer: "
+doc_to_target: "{{Answer}}"
+doc_to_choice: ['A', 'B', 'C', 'D']
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
